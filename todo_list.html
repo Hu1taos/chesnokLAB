@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List — список задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="todo.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img">
+                    <path d="M13 24.5l7.2 7.2L36 15.8" />
+                    <rect x="5" y="5" width="38" height="38" rx="11" />
+                </svg>
+            </div>
+            <div>
+                <p class="eyebrow">ПЛАНИРУЙ ПРОЩЕ</p>
+                <h1>Мои задачи</h1>
+                <p class="subtitle">Записывай важное и отмечай сделанное.</p>
+            </div>
+        </header>
+
+        <section class="task-card" aria-label="Список задач">
+            <form id="newtask" class="new-task">
+                <label class="visually-hidden" for="task-input">Описание задачи</label>
+                <input
+                    id="task-input"
+                    type="text"
+                    placeholder="Введите описание задачи..."
+                    maxlength="120"
+                    autocomplete="off"
+                >
+                <button id="push" type="submit">
+                    <span class="plus" aria-hidden="true">+</span>
+                    Добавить
+                </button>
+            </form>
+
+            <div class="list-heading">
+                <h2>Список задач</h2>
+                <span id="task-count" class="task-count">0 задач</span>
+            </div>
+
+            <div id="tasks" class="tasks" aria-live="polite">
+                <div class="empty-state" id="empty-state">
+                    <div class="empty-icon" aria-hidden="true">✦</div>
+                    <strong>Пока задач нет</strong>
+                    <span>Добавьте первую задачу выше</span>
+                </div>
+            </div>
+
+            <footer class="card-footer">
+                <span><span class="status-dot"></span> Ваш план на сегодня</span>
+                <button id="clear-completed" class="clear-button" type="button">Удалить выполненные</button>
+            </footer>
+        </section>
+
+        <p class="page-note">Небольшие шаги каждый день — большой результат.</p>
+    </main>
+</body>
+</html>
