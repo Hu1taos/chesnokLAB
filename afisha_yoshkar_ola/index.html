@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Афиша Йошкар-Олы</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top"><span class="brand-icon">Й</span><span>Афиша <b>Йошкар-Олы</b><small>СОБЫТИЯ • ВПЕЧАТЛЕНИЯ • ГОРОД</small></span></a>
+    <div class="city">📍 <b>Йошкар-Ола</b><small>Республика Марий Эл</small></div>
+    <form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="Найти мероприятие..."><button type="submit">Найти</button></form>
+  </div>
+</header>
+
+<nav class="nav">
+  <a class="active" href="#top">Главная</a>
+  <a href="#events">Мероприятия</a>
+  <a href="#calendar">Календарь</a>
+  <a href="#places">Достопримечательности</a>
+  <a href="#footer">Контакты</a>
+</nav>
+
+<main class="wrap">
+  <section class="welcome">
+    <div><span class="overline">АФИША ГОРОДА</span><h1>Куда сходить<br>в Йошкар-Оле?</h1>
+      <p>Концерты, выставки, фестивали и интересные места столицы Марий Эл — всё в одной афише.</p>
+      <a class="primary-btn" href="#events">Смотреть мероприятия <span>→</span></a>
+    </div>
+    <div class="welcome-photo">
+      <img src="https://putidorogi-nn.ru/images/stories/evropa/rossiya/naberezhnaya-bryugge-v-yoshkar-ole_3.jpg" alt="Набережная Брюгге в Йошкар-Оле">
+      <div class="photo-label">Йошкар-Ола · Набережная Брюгге</div>
+    </div>
+  </section>
+
+  <section class="quick-cats" aria-label="Категории мероприятий">
+    <button class="cat active" data-filter="all">Все события</button>
+    <button class="cat" data-filter="concert">🎵 Концерты</button>
+    <button class="cat" data-filter="theatre">🎭 Театр</button>
+    <button class="cat" data-filter="exhibition">🖼 Выставки</button>
+    <button class="cat" data-filter="family">👨‍👩‍👧 Для всей семьи</button>
+    <button class="cat" data-filter="city">🏙 Городские события</button>
+  </section>
+
+  <div class="content-grid">
+    <section class="main-content" id="events">
+      <div class="section-head"><div><span class="overline">ВЫБИРАЙ И ПЛАНИРУЙ</span><h2>Ближайшие мероприятия</h2></div><span class="result-count" id="resultCount"></span></div>
+
+      <div class="event-grid" id="eventGrid">
+        <article class="event-card" data-category="city" data-date="2026-11-20" data-search="экскурсия набережная брюгге прогулка город">
+          <img src="https://www.advantour.com/russia/images/yoshkar-ola/yoshkar-ola-bruges-embankment.jpg" alt="Набережная Брюгге">
+          <div class="event-info"><span class="pill">ГОРОДСКОЕ СОБЫТИЕ</span><h3>Прогулка по набережной Брюгге</h3><p>Знакомство с яркой архитектурой и красивыми видами Малой Кокшаги.</p><div class="meta">📅 20 ноября · 14:00</div><button class="details-btn" data-title="Прогулка по набережной Брюгге" data-description="Прогулка по одному из самых узнаваемых мест Йошкар-Олы. Участники увидят разноцветные фасады, башни, мосты и набережную Малой Кокшаги." data-place="Набережная Брюгге, Йошкар-Ола" data-time="20 ноября, 14:00">Подробнее</button></div>
+        </article>
+
+        <article class="event-card" data-category="theatre" data-date="2026-11-22" data-search="театр кукольный спектакль искусство">
+          <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=900&q=85" alt="Театральная сцена">
+          <div class="event-info"><span class="pill">ТЕАТР</span><h3>Вечер театрального искусства</h3><p>Спектакль и творческая встреча для любителей сцены.</p><div class="meta">📅 22 ноября · 18:00</div><button class="details-btn" data-title="Вечер театрального искусства" data-description="Театральный вечер с постановкой и встречей с участниками творческой команды. Программа подойдёт для любителей сценического искусства." data-place="Театр Йошкар-Олы" data-time="22 ноября, 18:00">Подробнее</button></div>
+        </article>
+
+        <article class="event-card" data-category="concert" data-date="2026-11-23" data-search="концерт музыка живое выступление">
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85" alt="Музыкальный концерт">
+          <div class="event-info"><span class="pill">КОНЦЕРТ</span><h3>Музыкальный вечер</h3><p>Живое звучание, любимые мелодии и атмосфера праздника.</p><div class="meta">📅 23 ноября · 19:00</div><button class="details-btn" data-title="Музыкальный вечер" data-description="Вечер живой музыки с выступлениями исполнителей и яркой концертной программой." data-place="Концертная площадка, Йошкар-Ола" data-time="23 ноября, 19:00">Подробнее</button></div>
+        </article>
+
+        <article class="event-card" data-category="exhibition" data-date="2026-11-25" data-search="выставка картины искусство галерея">
+          <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=900&q=85" alt="Художественная выставка">
+          <div class="event-info"><span class="pill">ВЫСТАВКА</span><h3>Мир современного искусства</h3><p>Живопись, необычные идеи и работы современных художников.</p><div class="meta">📅 25 ноября · 12:00</div><button class="details-btn" data-title="Мир современного искусства" data-description="Выставка художественных работ, знакомящая посетителей с разными направлениями современного искусства." data-place="Национальная художественная галерея" data-time="25 ноября, 12:00">Подробнее</button></div>
+        </article>
+
+        <article class="event-card" data-category="family" data-date="2026-11-28" data-search="семья дети мастер класс праздник">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=85" alt="Семейное мероприятие">
+          <div class="event-info"><span class="pill">ДЛЯ ВСЕЙ СЕМЬИ</span><h3>Семейный выходной</h3><p>Мастер-классы, развлечения и активности для детей и родителей.</p><div class="meta">📅 28 ноября · 11:00</div><button class="details-btn" data-title="Семейный выходной" data-description="День семейного отдыха с творческими мастер-классами, играми и развлечениями для детей и взрослых." data-place="Городской парк, Йошкар-Ола" data-time="28 ноября, 11:00">Подробнее</button></div>
+        </article>
+
+        <article class="event-card" data-category="city" data-date="2026-11-30" data-search="экскурсия кремль история город">
+          <img src="https://visit-mariel.ru/upload/iblock/dd1/dd13cbced7afe315ea5a442d5595b3a1.jpg" alt="Достопримечательности Йошкар-Олы">
+          <div class="event-info"><span class="pill">ЭКСКУРСИЯ</span><h3>Знакомство с Царевококшайским кремлём</h3><p>История города, архитектура и прогулка по старинным местам.</p><div class="meta">📅 30 ноября · 13:00</div><button class="details-btn" data-title="Экскурсия по Царевококшайскому кремлю" data-description="Познавательная прогулка по историко-культурному комплексу под открытым небом. Можно узнать больше об истории Царевококшайска и Йошкар-Олы." data-place="Царевококшайский кремль" data-time="30 ноября, 13:00">Подробнее</button></div>
+        </article>
+      </div>
+      <div class="no-results" id="noResults" hidden>По вашему запросу ничего не найдено. Попробуйте изменить поиск или фильтр.</div>
+    </section>
+
+    <aside class="sidebar">
+      <section class="side-box" id="calendar">
+        <div class="side-title"><h2>Календарь</h2><span>Ноябрь 2026</span></div>
+        <div class="calendar">
+          <div class="weekdays"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+          <div class="days">
+            <span class="muted">26</span><span class="muted">27</span><span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><button>31</button><button>1</button>
+            <button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button>
+            <button>9</button><button>10</button><button>11</button><button>12</button><button>13</button><button>14</button><button>15</button>
+            <button>16</button><button>17</button><button>18</button><button>19</button><button class="has-event" data-day="20">20</button><button>21</button><button class="has-event" data-day="22">22</button>
+            <button class="has-event" data-day="23">23</button><button>24</button><button class="has-event" data-day="25">25</button><button>26</button><button>27</button><button class="has-event" data-day="28">28</button><button>29</button>
+            <button class="has-event" data-day="30">30</button>
+          </div>
+        </div>
+        <button class="reset-date" id="resetDate">Показать все даты</button>
+      </section>
+
+      <section class="side-box">
+        <div class="side-title"><h2>Категории</h2></div>
+        <button class="side-filter" data-filter="concert">🎵 Концерты <span>›</span></button>
+        <button class="side-filter" data-filter="theatre">🎭 Театр <span>›</span></button>
+        <button class="side-filter" data-filter="exhibition">🖼 Выставки <span>›</span></button>
+        <button class="side-filter" data-filter="family">👨‍👩‍👧 Для семьи <span>›</span></button>
+        <button class="side-filter" data-filter="city">🏙 Экскурсии и город <span>›</span></button>
+        <button class="side-filter" data-filter="all">Все мероприятия <span>›</span></button>
+      </section>
+
+      <section class="side-box" id="places">
+        <div class="side-title"><h2>Места города</h2></div>
+        <a class="place-link" href="https://visit-mariel.ru/routs/sights/naberezhnaya-bryugge-/" target="_blank"><img src="https://putidorogi-nn.ru/images/stories/evropa/rossiya/naberezhnaya-bryugge-v-yoshkar-ole_3.jpg" alt=""><span><b>Набережная Брюгге</b><small>Архитектура и прогулки</small></span></a>
+        <a class="place-link" href="https://i-ola.ru/city/generalinf/yoshkar-ola-is-better-to-see-once.php" target="_blank"><img src="https://visit-mariel.ru/upload/iblock/dd1/dd13cbced7afe315ea5a442d5595b3a1.jpg" alt=""><span><b>Царевококшайский кремль</b><small>История города</small></span></a>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer id="footer" class="footer">
+  <div><a class="brand footer-brand" href="#top"><span class="brand-icon">Й</span><span>Афиша <b>Йошкар-Олы</b><small>СОБЫТИЯ • ВПЕЧАТЛЕНИЯ • ГОРОД</small></span></a><p>Находи интересные события в родном городе.</p></div>
+  <div><b>Разделы</b><a href="#events">Мероприятия</a><a href="#calendar">Календарь</a><a href="#places">Места города</a></div>
+  <div><b>Контакты</b><a href="mailto:afisha@example.ru">✉ afisha@example.ru</a><span>Йошкар-Ола, Республика Марий Эл</span></div>
+</footer>
+<div class="copyright">© 2026 Афиша Йошкар-Олы · Учебный проект</div>
+
+<div class="modal" id="eventModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+    <span class="overline">ИНФОРМАЦИЯ О МЕРОПРИЯТИИ</span>
+    <h2 id="modalTitle"></h2><p id="modalDescription"></p>
+    <div class="modal-meta" id="modalTime"></div><div class="modal-meta" id="modalPlace"></div>
+    <button class="primary-btn" id="modalOk">Понятно</button>
+  </div>
+</div>
+</body>
+</html>
